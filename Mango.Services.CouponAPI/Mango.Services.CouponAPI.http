@@ -1,6 +1,32 @@
 @Mango.Services.CouponAPI_HostAddress = http://localhost:7001
 
-GET {{Mango.Services.CouponAPI_HostAddress}}/api/CouponAPI/1
+GET {{Mango.Services.CouponAPI_HostAddress}}/api/CouponAPI/getbycode/10off
 Accept: application/json
 
 ###
+POST {{Mango.Services.CouponAPI_HostAddress}}/api/CouponAPI
+Accept: application/json 
+Content-Type: application/json
+
+{
+    "CouponId": 0,
+    "CouponCode": "SUMMER2023",
+    "DiscountAmount": 15,
+    "MinAmount": 30
+}
+
+###
+PUT {{Mango.Services.CouponAPI_HostAddress}}/api/CouponAPI
+Accept: application/json 
+Content-Type: application/json
+
+{
+    "CouponId": 3,
+    "CouponCode": "SUMMER2025",
+    "DiscountAmount": 15,
+    "MinAmount": 30
+}
+
+###
+DELETE  {{Mango.Services.CouponAPI_HostAddress}}/api/CouponAPI/4
+Accept: application/json 

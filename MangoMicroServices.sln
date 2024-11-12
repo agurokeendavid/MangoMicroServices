@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.CouponAPI", "Mango.Services.CouponAPI\Mango.Services.CouponAPI.csproj", "{118AE9B2-29A2-4EED-A902-4919745099FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.PaymentAPI", "Mango.Services.PaymentAPI\Mango.Services.PaymentAPI.csproj", "{14E63695-FC79-43F2-AA5D-A81EA14358C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.PaymentAPI", "Mango.Services.PaymentAPI\Mango.Services.PaymentAPI.csproj", "{14E63695-FC79-43F2-AA5D-A81EA14358C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Web", "FrontEnd\Mango.Web\Mango.Web.csproj", "{0820EE86-AC88-4B9D-B25B-2A54F265F402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{14E63695-FC79-43F2-AA5D-A81EA14358C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E63695-FC79-43F2-AA5D-A81EA14358C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E63695-FC79-43F2-AA5D-A81EA14358C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{118AE9B2-29A2-4EED-A902-4919745099FB} = {C8203F5F-E644-424D-BBAA-E2428AB4905A}
 		{14E63695-FC79-43F2-AA5D-A81EA14358C2} = {C8203F5F-E644-424D-BBAA-E2428AB4905A}
+		{0820EE86-AC88-4B9D-B25B-2A54F265F402} = {DB2983D4-4C6B-4DE3-AFF9-CD78BBFD30E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5FA0088D-23C8-4B75-9D27-5670B50932C0}
