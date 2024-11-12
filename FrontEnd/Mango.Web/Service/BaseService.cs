@@ -22,7 +22,7 @@ public class BaseService : IBaseService
         {
             HttpClient client = _httpClientFactory.CreateClient("MangoAPI");
             HttpRequestMessage message = new();
-            message.Headers.Add("accept", "application/json");
+            message.Headers.Add("Accept", "application/json");
             // token
 
             message.RequestUri = new Uri(dto.Url);
