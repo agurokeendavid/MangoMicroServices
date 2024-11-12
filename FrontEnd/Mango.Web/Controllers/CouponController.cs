@@ -28,4 +28,33 @@ public class CouponController : Controller
         
         return View(list);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(CouponDto dto)
+    {
+        if (ModelState.IsValid)
+        {
+            
+        }
+        return View();
+    }
+    
+    
+    [HttpGet]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var coupon = await _couponService.GetCouponByIdAsync(id);
+
+        if (coupon is null)
+            return NotFound();
+
+        return View(coupon.Result);
+    }
 }
