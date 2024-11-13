@@ -18,14 +18,18 @@ public class CouponController : Controller
     public async Task<IActionResult> Index()
     {
         List<CouponDto?> list = new();
-        
+
         var couponResponse = await _couponService.GetAllCouponsAsync();
 
         if (couponResponse != null && couponResponse.IsSuccess)
         {
             list = JsonConvert.DeserializeObject<List<CouponDto>>(Convert.ToString(couponResponse.Result));
         }
-        
+        else
+        {
+            TempData["error"] = couponResponse?.Message;
+        }
+
         return View(list);
     }
 
@@ -37,24 +41,60 @@ public class CouponController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(CouponDto dto)
+    public async Task<IActionResult> Create(CouponDto model)
     {
         if (ModelState.IsValid)
         {
-            
+            ResponseDto? response = await _couponService.CreateCouponAsync(model);
+
+            if (response != null && response.IsSuccess)
+            {
+                TempData["success"] = response.Message;
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                TempData["error"] = response?.Message;
+            }
         }
-        return View();
+
+        return View(model);
     }
-    
-    
+
     [HttpGet]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(int couponId)
     {
-        var coupon = await _couponService.GetCouponByIdAsync(id);
+        var couponResponse = await _couponService.GetCouponByIdAsync(couponId);
 
-        if (coupon is null)
-            return NotFound();
+        if (couponResponse != null && couponResponse.IsSuccess)
+        {
+            CouponDto? model = JsonConvert.DeserializeObject<CouponDto>(Convert.ToString(couponResponse.Result));
+            return View(model);
+        }
+        else
+        {
+            TempData["error"] = couponResponse?.Message;
+        }
 
-        return View(coupon.Result);
+        return NotFound();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Delete(CouponDto couponDto)
+    {
+        var couponResponse = await _couponService.DeleteCouponAsync(couponDto.CouponId);
+
+        if (couponResponse != null && couponResponse.IsSuccess)
+        {
+            TempData["success"] = couponResponse.Message;
+            return RedirectToAction(nameof(Index));
+        }
+        else
+        {
+            TempData["error"] = couponResponse?.Message;
+        }
+
+        return View(couponDto);
     }
 }

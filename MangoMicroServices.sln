@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.CouponAPI", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.PaymentAPI", "Mango.Services.PaymentAPI\Mango.Services.PaymentAPI.csproj", "{14E63695-FC79-43F2-AA5D-A81EA14358C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Web", "FrontEnd\Mango.Web\Mango.Web.csproj", "{0820EE86-AC88-4B9D-B25B-2A54F265F402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Web", "FrontEnd\Mango.Web\Mango.Web.csproj", "{0820EE86-AC88-4B9D-B25B-2A54F265F402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{8EF561B9-C860-4E27-B9B8-0BC6EE58BC62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0820EE86-AC88-4B9D-B25B-2A54F265F402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF561B9-C860-4E27-B9B8-0BC6EE58BC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF561B9-C860-4E27-B9B8-0BC6EE58BC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF561B9-C860-4E27-B9B8-0BC6EE58BC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF561B9-C860-4E27-B9B8-0BC6EE58BC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{118AE9B2-29A2-4EED-A902-4919745099FB} = {C8203F5F-E644-424D-BBAA-E2428AB4905A}
 		{14E63695-FC79-43F2-AA5D-A81EA14358C2} = {C8203F5F-E644-424D-BBAA-E2428AB4905A}
 		{0820EE86-AC88-4B9D-B25B-2A54F265F402} = {DB2983D4-4C6B-4DE3-AFF9-CD78BBFD30E4}
+		{8EF561B9-C860-4E27-B9B8-0BC6EE58BC62} = {C8203F5F-E644-424D-BBAA-E2428AB4905A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5FA0088D-23C8-4B75-9D27-5670B50932C0}

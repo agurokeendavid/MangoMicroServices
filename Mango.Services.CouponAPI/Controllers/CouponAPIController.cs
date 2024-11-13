@@ -90,6 +90,7 @@ namespace Mango.Services.CouponAPI.Controllers
                 var couponObj = _mapper.Map<Coupon>(dto);
                 _dbContext.Coupons.Add(couponObj);
                 _dbContext.SaveChanges();
+                _response.Message = "Coupon Created Successfully";
                 _response.Result = _mapper.Map<CouponDto>(couponObj);
             }
             catch (Exception exception)
@@ -109,6 +110,7 @@ namespace Mango.Services.CouponAPI.Controllers
                 var couponObj = _mapper.Map<Coupon>(dto);
                 _dbContext.Coupons.Update(couponObj);
                 _dbContext.SaveChanges();
+                _response.Message = "Coupon Updated Successfully";
                 _response.Result = _mapper.Map<CouponDto>(couponObj);
             }
             catch (Exception exception)
